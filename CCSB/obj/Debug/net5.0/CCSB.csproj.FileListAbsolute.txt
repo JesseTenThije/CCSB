@@ -38,3 +38,15 @@ C:\Users\jesse\Desktop\Project ccsb\CCSB\CCSB\obj\Debug\net5.0\ref\CCSB.dll
 C:\Users\jesse\Desktop\Project ccsb\CCSB\CCSB\obj\Debug\net5.0\CCSB.pdb
 C:\Users\jesse\Desktop\Project ccsb\CCSB\CCSB\obj\Debug\net5.0\CCSB.genruntimeconfig.cache
 C:\Users\jesse\Desktop\Project ccsb\CCSB\CCSB\obj\Debug\net5.0\CCSB.csproj.CopyComplete
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.csprojAssemblyReference.cache
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.AssemblyInfoInputs.cache
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.AssemblyInfo.cs
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.csproj.CoreCompileInputs.cache
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.RazorAssemblyInfo.cache
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.RazorAssemblyInfo.cs
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.dll
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\ref\CCSB.dll
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.pdb
+C:\Users\jesse\Desktop\CCSB\CCSB\obj\Debug\net5.0\CCSB.MvcApplicationPartsAssemblyInfo.cs
