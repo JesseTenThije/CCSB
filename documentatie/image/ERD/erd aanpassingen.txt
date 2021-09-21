@@ -1,0 +1,21 @@
+ERD, 
+wat is er verplicht
+
+Geboorte datum niet
+bankrekening wel
+email verplicht
+telefoon verplicht
+naam verplicht
+tussen voegsel niet
+adres niet 
+woonplaats ook niet
+
+Voertuig
+
+type niet
+merk moet er nog bij en is verplicht
+lengte wel int/cm
+stroomaansluiting ja/nee verplicht
+kenteken niet verplicht
+
+datum verplicht -> datetime
