@@ -92,6 +92,10 @@ namespace UGOZ_Marcel_Roesink.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Login");
         }
+        public IActionResult VoertuigRegister()
+        {
+            return View();
+        }
 
     }
 }

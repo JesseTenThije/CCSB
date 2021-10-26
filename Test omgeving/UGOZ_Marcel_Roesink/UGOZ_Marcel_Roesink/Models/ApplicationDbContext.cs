@@ -13,6 +13,8 @@ namespace UGOZ_Marcel_Roesink.Models
         {
 
         }
+
+        public DbSet<Vehicle> Voertuigen { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
     }
 }
