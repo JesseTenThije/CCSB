@@ -7406,24 +7406,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jaspe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Mike\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
+      "projectUniqueName": "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
       "projectName": "UGOZ_Marcel_Roesink",
-      "projectPath": "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
-      "packagesPath": "C:\\Users\\jaspe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\obj\\",
+      "projectPath": "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
+      "packagesPath": "C:\\Users\\Mike\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jaspe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Mike\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7500,7 +7495,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

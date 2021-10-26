@@ -873,3 +873,6 @@ C:\Users\jaspe\Documents\CCSB\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel
 C:\Users\jaspe\Documents\CCSB\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\ref\UGOZ_Marcel_Roesink.dll
 C:\Users\jaspe\Documents\CCSB\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.pdb
 C:\Users\jaspe\Documents\CCSB\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.genruntimeconfig.cache
+C:\Users\Mike\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.dll
+C:\Users\Mike\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\ref\UGOZ_Marcel_Roesink.dll
+C:\Users\Mike\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.pdb
