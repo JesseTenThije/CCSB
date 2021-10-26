@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj": {}
+    "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj": {
+    "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
+        "projectUniqueName": "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
         "projectName": "UGOZ_Marcel_Roesink",
-        "projectPath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
-        "packagesPath": "C:\\Users\\jesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\obj\\",
+        "projectPath": "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink.csproj",
+        "packagesPath": "C:\\Users\\Mike\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mike\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mike\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
