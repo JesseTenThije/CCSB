@@ -1,0 +1,56 @@
+﻿@model UGOZ_Marcel_Roesink.Models.ViewModels.RegisterCrvViewModel
+<h2>Voertuig Registreren</h2>
+<form method="post" asp-action="Register" asp-controller="Account">
+    <h4>Account aanmaken</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="Type"></label>
+        <div class="col-md-10">
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="Merk"></label>
+        <div class="col-md-10">
+            <input asp-for="Merk" class="form-control" />
+            <span asp-validation-for="Merk" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="lengte"></label>
+        <div class="col-md-10">
+            <input asp-for="lengte" class="form-control" />
+            <span asp-validation-for="lengte" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="stroom"></label>
+        <div class="col-md-10">
+            <input asp-for="stroom" class="form-control" />
+            <span asp-validation-for="stroom" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="kenteken"></label>
+        <div class="col-md-10">
+            <input asp-for="kenteken" class="form-control" />
+            <span asp-validation-for="kenteken" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10 offset-md-2">
+            <input type="submit" value="Registreer" class="btn btn-success" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10 offset-md-2">
+            <a asp-action="Login">Login</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+}
