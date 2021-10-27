@@ -32,7 +32,7 @@ namespace UGOZ_Marcel_Roesink.Models
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public Electricity CrvElectricity { get; set; }
 
-        [DisplayName("Rol")]
+        [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string CrvPlate { get; set; }
     }
