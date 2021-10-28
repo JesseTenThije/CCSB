@@ -8,13 +8,13 @@ using UGOZ_Marcel_Roesink.Services;
 
 namespace UGOZ_Marcel_Roesink.Services
 {
-    public interface IAppointmentService
+    public interface ICrvService
     {
         public List<DoctorViewModel> GetDoctorList();
 
         public List<PatientViewModel> GetPatientList();
         public Task<int> AddUpdate(AppointmentViewModel model);
 
-        public Task<int> AddUpdate(RegisterCrvViewModel model);
+
     }
 }

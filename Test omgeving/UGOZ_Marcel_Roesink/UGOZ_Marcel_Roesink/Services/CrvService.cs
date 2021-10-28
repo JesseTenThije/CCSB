@@ -12,21 +12,13 @@ using UGOZ_Marcel_Roesink.Services;
 
 namespace UGOZ_Marcel_Roesink.Services
 {
-    public class AppointmentService : IAppointmentService
+    public class CrvService : ICrvService
     {
         private readonly ApplicationDbContext _db;
-        UserManager<ApplicationUser> _userManager;
-        SignInManager<ApplicationUser> _signInManager;
-        RoleManager<IdentityRole> _roleManager;
 
-        public AppointmentService(ApplicationDbContext db, UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager,
-        RoleManager<IdentityRole> roleManager)
+        public CrvService(ApplicationDbContext db)
         {
             _db = db;
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _roleManager = roleManager;
         }
 
         public List<DoctorViewModel> GetDoctorList()
@@ -63,34 +55,6 @@ namespace UGOZ_Marcel_Roesink.Services
             return patient;
         }
 
-        public async Task<int> AddUpdate(AppointmentViewModel model)
-        {
-            var startDate = DateTime.Parse(model.StartDate, CultureInfo.CreateSpecificCulture("en-US"));
-            var endDate = startDate.AddMinutes(Convert.ToDouble(model.Duration));
-            if (model != null && model.Id > 0)
-            {
-                // TODO: add code for update appointment
-                return 1;
-            }
-            else
-            {
-                Appointment appointment = new Appointment()
-                {
-                    Title = model.Title,
-                    Description = model.Description,
-                    StartDate = startDate,
-                    EndDate = endDate,
-                    Duration = model.Duration,
-                    DoctorId = model.DoctorId,
-                    PatientId = model.PatientId,
-                    IsDoctorApproved = model.IsDoctorApproved,
-                    AdminId = model.AdminId
-                };
-                _db.Appointments.Add(appointment);
-                await _db.SaveChangesAsync();
-                return 2;
-            }
-        }
         public async Task<int> AddUpdate(RegisterCrvViewModel model)
         {
             var startDate = DateTime.Parse(model.StartDate, CultureInfo.CreateSpecificCulture("en-US"));
@@ -118,6 +82,6 @@ namespace UGOZ_Marcel_Roesink.Services
                 await _db.SaveChangesAsync();
                 return 2;
             }
+
         }
-    }
 }

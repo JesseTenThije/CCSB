@@ -94,21 +94,6 @@ namespace UGOZ_Marcel_Roesink.Controllers
             return RedirectToAction("Login");
         }
 
-        public IActionResult CrvRegister(RegisterCrvViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                Vehicle crv = new Vehicle()
-                {
-                    CrvName = model.CrvName,
-                    CrvType = model.CrvType,
-                    CrvLength = model.CrvLength,
-                    CrvElectricity = model.CrvElectricity,
-                    CrvPlate = model.CrvPlate
-                };
-            }
-            return View();
-        }
-
+        
     }
 }
