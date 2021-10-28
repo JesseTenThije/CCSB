@@ -1,13 +1,5 @@
-<<<<<<< Updated upstream
-﻿@model UGOZ_Marcel_Roesink.Models.RegisterCrvViewModel
-=======
-﻿@model UGOZ_Marcel_Roesink.Models.ViewModels.RegisterCrvViewModel
+@model UGOZ_Marcel_Roesink.Models.RegisterCrvViewModel
 
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 <h2>Voertuig Registreren</h2>
 <form method="post" asp-action="Register" asp-controller="Account">
     <h4>Account aanmaken</h4>
@@ -37,7 +29,9 @@
     <div class="form-group row">
         <label class="col-md-2" asp-for="CrvElectricity"></label>
         <div class="col-md-10">
-            <input asp-for="CrvElectricity" class="form-control" />
+            <select asp-for="CrvElectricity" class="form-control" asp-items="Html.GetEnumSelectList<UGOZ_Marcel_Roesink.Enums.CrvElectricityClass.CrvElectricity>()" multiple>
+                <option selected="selected" value="">Met electrische aansluiting?</option>
+            </select>
             <span asp-validation-for="CrvElectricity" class="text-danger"></span>
         </div>
     </div>

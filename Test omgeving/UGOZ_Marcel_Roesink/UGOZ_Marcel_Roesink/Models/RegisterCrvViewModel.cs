@@ -4,19 +4,14 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using UGOZ_Marcel_Roesink.Enums;
+using static UGOZ_Marcel_Roesink.Enums.CrvElectricityClass;
 
 namespace UGOZ_Marcel_Roesink.Models
 {
     public class RegisterCrvViewModel
     {
-        public enum Electricity
-        {
-            [Description("Yes")]
-            Yes,
 
-            [Description("No")]
-            No
-        }
         [DisplayName("Merk")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string CrvName { get; set; }
@@ -28,12 +23,14 @@ namespace UGOZ_Marcel_Roesink.Models
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public int CrvLength { get; set; }
 
-        [EmailAddress]
+        [EnumDataType(typeof(CrvElectricity))]
+        [DisplayName("Elektriciteit")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
-        public Electricity CrvElectricity { get; set; }
+        public CrvElectricity CrvElectricity { get; internal set; }
 
         [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string CrvPlate { get; set; }
+        
     }
 }

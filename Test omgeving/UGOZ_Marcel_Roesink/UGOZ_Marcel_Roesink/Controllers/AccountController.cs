@@ -26,6 +26,7 @@ namespace UGOZ_Marcel_Roesink.Controllers
             _roleManager = roleManager;
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
@@ -92,8 +93,20 @@ namespace UGOZ_Marcel_Roesink.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Login");
         }
-        public IActionResult CrvRegister()
+
+        public IActionResult CrvRegister(RegisterCrvViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                Vehicle crv = new Vehicle()
+                {
+                    CrvName = model.CrvName,
+                    CrvType = model.CrvType,
+                    CrvLength = model.CrvLength,
+                    CrvElectricity = model.CrvElectricity,
+                    CrvPlate = model.CrvPlate
+                };
+            }
             return View();
         }
 
