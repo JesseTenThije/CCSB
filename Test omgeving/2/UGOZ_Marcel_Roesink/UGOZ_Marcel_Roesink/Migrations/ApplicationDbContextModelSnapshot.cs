@@ -132,6 +132,33 @@ namespace CCSB.Migrations
                     b.ToTable("Appointments");
                 });
 
+            modelBuilder.Entity("CCSB.Models.Crv", b =>
+                {
+                    b.Property<int?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CrvElectricity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CrvLength")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CrvName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CrvPlate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CrvType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Crv");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

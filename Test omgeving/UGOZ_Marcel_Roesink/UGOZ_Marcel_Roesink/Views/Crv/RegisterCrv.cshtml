@@ -1,7 +1,7 @@
 ﻿@model CCSB.Models.RegisterCrvViewModel
-<h2>Registreren</h2>
-<form method="post" asp-action="Register" asp-controller="Account">
-    <h4>Account aanmaken</h4>
+<h2>Voertuig registreren</h2>
+<form method="post" asp-action="RegisterCrv" asp-controller="Crv">
+    <h4>Voertuig aanmaken</h4>
     <hr />
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group row">
@@ -29,17 +29,25 @@
     <div class="form-group row">
         <label class="col-md-2" asp-for="CrvElectricity"></label>
         <div class="col-md-10">
-            <select asp-for="CrvElectricity"
-                    asp-items="@CCSB.Utility.Helper.GetElectricityForDropDown()"
-                    class="form-control">
-                <option selected>-- Selecteer Ja of nee</option>
+            <select class="form-control">
+                <option value="0">Ja</option>
+                <option value="1">Nee</option>
             </select>
             <span asp-validation-for="CrvElectricity" class="text-danger"></span>
         </div>
     </div>
+
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="CrvPlate"></label>
+        <div class="col-md-10">
+            <input asp-for="CrvPlate" class="form-control" />
+            <span asp-validation-for="CrvPlate" class="text-danger"></span>
+        </div>
+    </div>
+
     <div class="form-group">
         <div class="col-md-10 offset-md-2">
-            <input type="submit" value="Registreer" class="btn btn-success" />
+            <input type="submit" value="RegistreerCrv" class="btn btn-success" />
         </div>
     </div>
 

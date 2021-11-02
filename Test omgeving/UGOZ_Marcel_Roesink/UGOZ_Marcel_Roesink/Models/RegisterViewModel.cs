@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace UGOZ_Marcel_Roesink.Models
+namespace CCSB.Models
 {
     public class RegisterViewModel
     {

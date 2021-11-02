@@ -10,11 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UGOZ_Marcel_Roesink.Models;
-using UGOZ_Marcel_Roesink.Models.ViewModels;
-using UGOZ_Marcel_Roesink.Services;
+using CCSB.Models;
+using CCSB.Models.ViewModels;
+using CCSB.Services;
 
-namespace UGOZ_Marcel_Roesink
+namespace CCSB
 {
     public class Startup
     {

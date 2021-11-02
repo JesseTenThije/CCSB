@@ -24,11 +24,11 @@ namespace CCSB.Models
         [DisplayName("Type")]
         public string CrvType { get; set; }
 
-        [DisplayName("Lengte")]
+        [DisplayName("Lengte (in cm)")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public int CrvLength { get; set; }
 
-        [EmailAddress]
+        [DisplayName("Electriciteit")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public Electricity CrvElectricity { get; set; }
 

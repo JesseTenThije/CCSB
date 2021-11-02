@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CCSB.Migrations
 {
-    public partial class newdatabase : Migration
+    public partial class test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -68,6 +68,23 @@ namespace CCSB.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Crv",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CrvName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CrvType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CrvLength = table.Column<int>(type: "int", nullable: false),
+                    CrvElectricity = table.Column<int>(type: "int", nullable: false),
+                    CrvPlate = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Crv", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -235,6 +252,9 @@ namespace CCSB.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Crv");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

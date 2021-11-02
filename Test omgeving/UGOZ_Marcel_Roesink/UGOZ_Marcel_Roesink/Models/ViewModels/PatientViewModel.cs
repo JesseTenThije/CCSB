@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace UGOZ_Marcel_Roesink.Models.ViewModels
+namespace CCSB.Models.ViewModels
 {
     public class PatientViewModel
     {

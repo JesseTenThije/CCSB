@@ -14,5 +14,6 @@ namespace CCSB.Models
 
         }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Crv> Crv { get; set; }
     }
 }

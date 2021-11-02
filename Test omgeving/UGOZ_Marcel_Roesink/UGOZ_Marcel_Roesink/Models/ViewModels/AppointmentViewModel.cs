@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using UGOZ_Marcel_Roesink.Services;
+using CCSB.Services;
 
-namespace UGOZ_Marcel_Roesink.Models
+namespace CCSB.Models
 {
     public class AppointmentViewModel
     {

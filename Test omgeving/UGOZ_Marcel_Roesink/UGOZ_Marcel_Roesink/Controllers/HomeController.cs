@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using UGOZ_Marcel_Roesink.Models;
+using CCSB.Models;
 
-namespace UGOZ_Marcel_Roesink.Controllers
+namespace CCSB.Controllers
 {
     public class HomeController : Controller
     {

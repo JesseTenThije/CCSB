@@ -1,16 +1,37 @@
 ﻿@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signinManager
 
-@if (signinManager.IsSignedIn(User))
+@if (signinManager.IsSignedIn(User) && User.IsInRole("Beheerder"))
 {
     <form method="post" id="logoutForm" asp-action="LogOff" asp-controller="Account">
         <ul class="nav navbar-nav">
+            <li class="text-black-50 nav-link">
+                <a id="Appointments" class="text-black-50" asp-action="index" asp-controller="appointment">Reserveringen</a>
+            </li>
             <li class="text-black-50 nav-link"> Welkom @User.Identity.Name</li>
             <li class="text-black-50">
                 <a class="text-black-50 nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
             </li>
+            <li>
+                <a id="Voertuigen" class="nav-link text-black-50" asp-action="index" asp-controller="Crv">Alle voertuigen</a>
+            </li>
         </ul>
     </form>
 }
+else @if (signinManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+<form method="post" id="logoutForm" asp-action="LogOff" asp-controller="Account">
+    <ul class="nav navbar-nav">
+        <li class="text-black-50 nav-link"> Welkom @User.Identity.Name</li>
+        <li class="text-black-50">
+            <a class="text-black-50 nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
+        </li>
+        <li>
+            <a id="loginLink" class="nav-link text-black-50" asp-action="Crv" asp-controller="Crv">Inloggen</a>
+        </li>
+    </ul>
+</form>
+}
+
 else
 {
 <ul class="nav navbar-nav">
@@ -21,10 +42,6 @@ else
     <li>
         @*@Html.ActionLink("Login","Login","Account", routeValues:null, new { id = "loginLink" })*@
         <a id="loginLink" class="nav-link text-black-50" asp-action="Login" asp-controller="Account">Inloggen</a>
-    </li>
-    <li>
-        @*@Html.ActionLink("Login","Login","Account", routeValues:null, new { id = "loginLink" })*@
-        <a id="loginLink" class="nav-link text-black-50" asp-action="CrvRegister" asp-controller="Account">Voertuig Registreren</a>
     </li>
 </ul>
 }

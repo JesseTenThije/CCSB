@@ -1,0 +1,57 @@
+﻿@model CCSB.Models.RegisterCrvViewModel
+<h2>Voertuig registreren</h2>
+<form method="post" asp-action="RegisterCrv" asp-controller="Crv">
+    <h4>Voertuig aanmaken</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="CrvName"></label>
+        <div class="col-md-10">
+            <input asp-for="CrvName" class="form-control" />
+            <span asp-validation-for="CrvName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="CrvType"></label>
+        <div class="col-md-10">
+            <input asp-for="CrvType" class="form-control" />
+            <span asp-validation-for="CrvType" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="CrvLength"></label>
+        <div class="col-md-10">
+            <input asp-for="CrvLength" class="form-control" />
+            <span asp-validation-for="CrvLength" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="CrvElectricity"></label>
+        <div class="col-md-10">
+            <select class="form-control">
+                <option value="0">Ja</option>
+                <option value="1">Nee</option>
+            </select>
+            <span asp-validation-for="CrvElectricity" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="CrvPlate"></label>
+        <div class="col-md-10">
+            <input asp-for="CrvPlate" class="form-control" />
+            <span asp-validation-for="CrvPlate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10 offset-md-2">
+            <input type="submit" value="RegistreerCrv" class="btn btn-success" />
+        </div>
+    </div>
+
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

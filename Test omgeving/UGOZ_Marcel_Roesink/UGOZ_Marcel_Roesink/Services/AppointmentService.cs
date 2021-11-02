@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UGOZ_Marcel_Roesink.Models.ViewModels;
-using UGOZ_Marcel_Roesink.Utility;
-using UGOZ_Marcel_Roesink.Models;
-using UGOZ_Marcel_Roesink.Controllers;
+using CCSB.Models.ViewModels;
+using CCSB.Utility;
+using CCSB.Models;
+using CCSB.Controllers;
 using Microsoft.AspNetCore.Identity;
 using System.Globalization;
-using UGOZ_Marcel_Roesink.Services;
+using CCSB.Services;
 
-namespace UGOZ_Marcel_Roesink.Services
+namespace CCSB.Services
 {
     public class AppointmentService : IAppointmentService
     {
@@ -91,33 +91,6 @@ namespace UGOZ_Marcel_Roesink.Services
                 return 2;
             }
         }
-        public async Task<int> AddUpdate(RegisterCrvViewModel model)
-        {
-            var startDate = DateTime.Parse(model.StartDate, CultureInfo.CreateSpecificCulture("en-US"));
-            var endDate = startDate.AddMinutes(Convert.ToDouble(model.Duration));
-            if (model != null && model.Id > 0)
-            {
-                // TODO: add code for update appointment
-                return 1;
-            }
-            else
-            {
-                Appointment appointment = new Appointment()
-                {
-                    Title = model.Title,
-                    Description = model.Description,
-                    StartDate = startDate,
-                    EndDate = endDate,
-                    Duration = model.Duration,
-                    DoctorId = model.DoctorId,
-                    PatientId = model.PatientId,
-                    IsDoctorApproved = model.IsDoctorApproved,
-                    AdminId = model.AdminId
-                };
-                _db.Appointments.Add(appointment);
-                await _db.SaveChangesAsync();
-                return 2;
-            }
-        }
+
     }
 }
