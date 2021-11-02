@@ -40,17 +40,6 @@ namespace CCSB.Utility
             return items.OrderBy(s => s.Text).ToList();
         }
 
-        public static List<SelectListItem> GetElectricityForDropDown()
-        {
-            var yesNo = new List<SelectListItem>
-            {
-                new SelectListItem{ Value=Helper.DropDownYes , Text = Helper.DropDownYes},
-                new SelectListItem{ Value=Helper.DropDownNo , Text = Helper.DropDownNo},
-
-            };
-            return yesNo.OrderBy(s => s.Text).ToList();
-        }
-
         public static List<SelectListItem> GetTimeDropDown()
         {
             List<SelectListItem> duration = new List<SelectListItem>();

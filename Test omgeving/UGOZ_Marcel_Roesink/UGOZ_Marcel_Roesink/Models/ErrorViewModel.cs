@@ -1,6 +1,6 @@
 using System;
 
-namespace UGOZ_Marcel_Roesink.Models
+namespace CCSB.Models
 {
     public class ErrorViewModel
     {

@@ -11,6 +11,9 @@
             <li class="text-black-50">
                 <a class="text-black-50 nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
             </li>
+            <li>
+                <a id="Voertuigen" class="nav-link text-black-50" asp-action="index" asp-controller="Crv">Alle voertuigen</a>
+            </li>
         </ul>
     </form>
 }
@@ -21,6 +24,9 @@ else @if (signinManager.IsSignedIn(User) && User.IsInRole("Admin"))
         <li class="text-black-50 nav-link"> Welkom @User.Identity.Name</li>
         <li class="text-black-50">
             <a class="text-black-50 nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
+        </li>
+        <li>
+            <a id="loginLink" class="nav-link text-black-50" asp-action="Crv" asp-controller="Crv">Inloggen</a>
         </li>
     </ul>
 </form>

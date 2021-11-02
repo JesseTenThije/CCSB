@@ -87,25 +87,6 @@ namespace CCSB.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult RegisterCrv(RegisterCrvViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                Crv crv = new Crv()
-                {
-                    CrvName = model.CrvName,
-                    CrvType = model.CrvType,
-                    CrvLength = model.CrvLength,
-                    CrvElectricity = (Crv.Electricity)model.CrvElectricity,
-                    CrvPlate = model.CrvPlate
-                };
-                return RedirectToAction("Index", "Home");
-            }
-            return View();
-        }
-
-        [HttpPost]
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();

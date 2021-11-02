@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace UGOZ_Marcel_Roesink.Models
+namespace CCSB.Models
 {
     public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
     {
@@ -13,8 +13,7 @@ namespace UGOZ_Marcel_Roesink.Models
         {
 
         }
-
-        public DbSet<Vehicle> Vehicle { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Crv> Crv { get; set; }
     }
 }

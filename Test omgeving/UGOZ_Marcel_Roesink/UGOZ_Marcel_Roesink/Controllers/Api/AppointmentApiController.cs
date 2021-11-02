@@ -5,12 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using UGOZ_Marcel_Roesink.Models;
-using UGOZ_Marcel_Roesink.Models.ViewModels;
-using UGOZ_Marcel_Roesink.Services;
-using UGOZ_Marcel_Roesink.Utility;
+using CCSB.Models;
+using CCSB.Models.ViewModels;
+using CCSB.Services;
+using CCSB.Utility;
 
-namespace UGOZ_Marcel_Roesink.Controllers.Api
+namespace CCSB.Controllers.Api
 {
     [Route("Api/[controller]")]
     [ApiController]

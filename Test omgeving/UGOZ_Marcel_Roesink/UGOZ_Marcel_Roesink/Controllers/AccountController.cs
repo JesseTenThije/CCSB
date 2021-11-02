@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UGOZ_Marcel_Roesink.Models;
-using UGOZ_Marcel_Roesink.Utility;
+using CCSB.Models;
+using CCSB.Utility;
 
-namespace UGOZ_Marcel_Roesink.Controllers
+namespace CCSB.Controllers
 {
     public class AccountController : Controller
     {
@@ -25,7 +25,6 @@ namespace UGOZ_Marcel_Roesink.Controllers
             _signInManager = signInManager;
             _roleManager = roleManager;
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -94,6 +93,5 @@ namespace UGOZ_Marcel_Roesink.Controllers
             return RedirectToAction("Login");
         }
 
-        
     }
 }

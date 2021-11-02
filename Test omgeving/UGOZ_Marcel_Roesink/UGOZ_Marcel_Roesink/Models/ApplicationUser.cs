@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace UGOZ_Marcel_Roesink.Models
+namespace CCSB.Models
 {
     public class ApplicationUser: IdentityUser
     {
