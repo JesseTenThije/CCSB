@@ -1754,3 +1754,4 @@ C:\Users\jelle\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\De
 C:\Users\jelle\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.Views.pdb
 C:\Users\jelle\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.csproj.CopyComplete
 C:\Users\jelle\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.genruntimeconfig.cache
+C:\Users\jaspe\Documents\CCSB\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\UGOZ_Marcel_Roesink.csproj.AssemblyReference.cache
