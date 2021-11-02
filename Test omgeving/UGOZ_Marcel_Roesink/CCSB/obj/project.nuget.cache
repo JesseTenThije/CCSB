@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UsBq4cIdF3UAN/FL75Rn9vJayOucyJRszezqVOHmJzkNriywdbZ7FPQolcD0sFYPWZUSp2Gh8Dl40Np0t6UqbA==",
+  "dgSpecHash": "78+DCHD5QKL6MBoHUpsS2Imx5GjBu1ZWLnYY7oWIQ0k6aIttENRCPgSJp1pnzOeb9XJfZpRYuvYpfmv0QdApRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\2\\UGOZ_Marcel_Roesink\\UGOZ_Marcel_Roesink\\CCSB.csproj",
+  "projectFilePath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesse\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jesse\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.10\\microsoft.aspnetcore.cryptography.internal.5.0.10.nupkg.sha512",

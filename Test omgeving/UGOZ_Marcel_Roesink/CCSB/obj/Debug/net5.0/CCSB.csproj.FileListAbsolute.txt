@@ -438,3 +438,6 @@ C:\Users\jesse\Desktop\CCSB\Test omgeving\2\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roes
 C:\Users\jesse\Desktop\CCSB\Test omgeving\2\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\CCSB.csprojAssemblyReference.cache
 C:\Users\jesse\Desktop\CCSB\Test omgeving\2\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\Razor\Views\Crv\Index.cshtml.g.cs
 C:\Users\jesse\Desktop\CCSB\Test omgeving\2\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\Razor\Views\Crv\RegisterCrv.cshtml.g.cs
+C:\Users\jesse\Desktop\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\CCSB.dll
+C:\Users\jesse\Desktop\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\ref\CCSB.dll
+C:\Users\jesse\Desktop\CCSB\Test omgeving\UGOZ_Marcel_Roesink\UGOZ_Marcel_Roesink\obj\Debug\net5.0\CCSB.pdb
