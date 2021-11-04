@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj": {}
+    "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\2\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj": {
+    "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\2\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj",
+        "projectUniqueName": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\2\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj",
         "projectName": "CCSB",
-        "projectPath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj",
+        "projectPath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\2\\UGOZ_Marcel_Roesink\\CCSB\\CCSB.csproj",
         "packagesPath": "C:\\Users\\jesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\UGOZ_Marcel_Roesink\\CCSB\\obj\\",
+        "outputPath": "C:\\Users\\jesse\\Desktop\\CCSB\\Test omgeving\\2\\UGOZ_Marcel_Roesink\\CCSB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,31 +46,31 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[5.0.11, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[5.0.11, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[5.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[5.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[5.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[5.0.11, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

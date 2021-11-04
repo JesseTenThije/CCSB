@@ -12,10 +12,10 @@ namespace CCSB.Models
         public enum Electricity
         {
             [Description("Yes")]
-            Yes,
+            Yes = 0,
 
             [Description("No")]
-            No
+            No = 1
         }
         [DisplayName("Merk")]
         [Required(ErrorMessage ="{0} is een verplicht veld.")]
@@ -30,6 +30,7 @@ namespace CCSB.Models
 
         [DisplayName("Electriciteit")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        [EnumDataType(typeof(Electricity))]
         public Electricity CrvElectricity { get; set; }
 
         [DisplayName("Kenteken")]

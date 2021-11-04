@@ -15,6 +15,9 @@ namespace CCSB.Utility
         public static readonly string DropDownYes = "Ja";
         public static readonly string DropDownNo = "Nee";
 
+        public static readonly string DropDownYesValue = "0";
+        public static readonly string DropDownNoValue = "1";
+
 
         public static string AppointmentAdded = "Afspraak succesvol opgeslagen.";
         public static string AppointmentConfirmed = "Afspraak bevestigd.";
@@ -36,6 +39,16 @@ namespace CCSB.Utility
                 new SelectListItem{ Value=Helper.Admin , Text = Helper.Admin},
                 new SelectListItem{ Value=Helper.Patient , Text = Helper.Patient},
                 new SelectListItem{ Value=Helper.Doctor , Text = Helper.Doctor}
+            };
+            return items.OrderBy(s => s.Text).ToList();
+        }
+
+        public static List<SelectListItem> GetYesNoForDropDown()
+        {
+            var items = new List<SelectListItem>
+            {
+                new SelectListItem{ Value=Helper.DropDownYesValue , Text = Helper.DropDownYes},
+                new SelectListItem{ Value=Helper.DropDownNoValue , Text = Helper.DropDownNo},
             };
             return items.OrderBy(s => s.Text).ToList();
         }

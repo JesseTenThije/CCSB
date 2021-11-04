@@ -24,7 +24,6 @@ namespace CCSB.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult RegisterCrv(RegisterCrvViewModel model)
         {
             if (ModelState.IsValid)
@@ -36,7 +35,10 @@ namespace CCSB.Controllers
                     CrvLength = model.CrvLength,
                     CrvElectricity = (Crv.Electricity)model.CrvElectricity,
                     CrvPlate = model.CrvPlate
+
                 };
+                _db.Crv.Add(crv);
+                _db.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
             return View();
@@ -47,6 +49,11 @@ namespace CCSB.Controllers
         {
             IEnumerable<Crv> objList = _db.Crv;
             return View(objList);
+        }
+
+        public IActionResult AddCrv()
+        {
+            return View();
         }
     }
 }
