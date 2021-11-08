@@ -29,7 +29,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="CrvElectricity" class="control-label"></label>
-                <select asp-for="CrvElectricity" class="form-control"></select>
+                <select asp-for="CrvElectricity"
+                        asp-items="@CCSB.Utility.Helper.GetYesNoForDropDown()"
+                        class="form-control">
+                    <option selected>-- Selecteer een keuze</option>
+                </select>
                 <span asp-validation-for="CrvElectricity" class="text-danger"></span>
             </div>
             <div class="form-group">
