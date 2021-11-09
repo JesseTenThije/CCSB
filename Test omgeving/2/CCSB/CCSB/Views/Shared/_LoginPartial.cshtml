@@ -1,0 +1,43 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signinManager
+
+@if (signinManager.IsSignedIn(User) && User.IsInRole("Beheerder"))
+{
+    <form method="post" id="logoutForm" asp-action="LogOff" asp-controller="Account">
+        <ul class="nav navbar-nav">
+            <li class="text-black-50 nav-link">
+                <a id="Reserveringen" class="text-black-50" asp-action="index" asp-controller="reserveringen">Reserveringen</a>
+            </li>
+            <li class="text-black-50 nav-link"> Welkom @User.Identity.Name</li>
+            <li class="text-black-50">
+                <a class="text-black-50 nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
+            </li>
+            <li>
+                <a id="Voertuigen" class="nav-link text-black-50" asp-action="index" asp-controller="Vehicle">Alle voertuigen</a>
+            </li>
+        </ul>
+    </form>
+}
+else @if (signinManager.IsSignedIn(User) && User.IsInRole("Admin"))
+{
+<form method="post" id="logoutForm" asp-action="LogOff" asp-controller="Account">
+    <ul class="nav navbar-nav">
+        <li class="text-black-50 nav-link"> Welkom @User.Identity.Name</li>
+        <li class="text-black-50">
+            <a class="text-black-50 nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
+        </li>
+        <li>
+            <a id="loginLink" class="nav-link text-black-50" asp-action="Vehicle" asp-controller="Vehicle">test</a>
+        </li>
+    </ul>
+</form>
+}
+
+else
+{
+<ul class="nav navbar-nav">
+    <li>
+        @*@Html.ActionLink("Login","Login","Account", routeValues:null, new { id = "loginLink" })*@
+        <a id="loginLink" class="nav-link text-black-50" asp-action="Login" asp-controller="Account">Inloggen</a>
+    </li>
+</ul>
+}
