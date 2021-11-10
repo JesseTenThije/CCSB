@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CCSB.Models
 {
+    //Email login automatic value to lowercase
     public class LoginViewModel
     {
         private string _email;
@@ -23,7 +24,7 @@ namespace CCSB.Models
                 _email = value.ToLower();
             }
         }
-        //auto prop "prop"
+        //Password login, error when wrong password and remember me button
         [Required(ErrorMessage = "{0} error")]
         [DataType(DataType.Password)]
         [Display(Name = "Wachtwoord")]

@@ -18,6 +18,7 @@ namespace CCSB.Controllers
         {
             _appointmentService = appointmentService;
         }
+        //List of user's 
         public IActionResult Index()
         {
             ViewBag.DoctorList = _appointmentService.GetDoctorList();
