@@ -1,0 +1,67 @@
+﻿@model CCSB.Models.Crv
+@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signinManager
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+@if (signinManager.IsSignedIn(User) && User.IsInRole("Beheerder"))
+{
+    <h1>Details</h1>
+
+    <div>
+        <h4>Crv</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CrvName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CrvName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CrvType)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CrvType)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CrvLength)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CrvLength)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CrvElectricity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CrvElectricity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CrvPlate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CrvPlate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ApplicationUser)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ApplicationUser.Email)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+}
+else
+{
+<ul class="nav navbar-nav">
+</ul>
+}
+
+    
+
