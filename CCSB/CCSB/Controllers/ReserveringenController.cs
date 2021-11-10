@@ -12,7 +12,7 @@ namespace CCSB.Controllers
     public class ReserveringenController : Controller
     {
         private readonly ApplicationDbContext _context;
-
+        //Connect to datatbase
         public ReserveringenController(ApplicationDbContext context)
         {
             _context = context;
@@ -26,7 +26,7 @@ namespace CCSB.Controllers
 
         }
 
-        // GET: Reserveringen/Details/5
+        // GET: Reserveringen/Details of a specific id
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -49,15 +49,16 @@ namespace CCSB.Controllers
         public IActionResult Create()
         {
             ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email");
-            ViewData["Crv"] = new SelectList(_context.Crv, "Id", "CrvPlate");
+            ViewData["CrvPlate"] = new SelectList(_context.Crv, "Id", "CrvPlate");
             return View();
         }
 
         // POST: Reserveringen/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //Combines user reservation data
         public async Task<IActionResult> Create([Bind("Id,StartDatum,ApplicationUserId,Vehicle")] Reserveringen reserveringen)
         {
             if (ModelState.IsValid)
@@ -70,14 +71,16 @@ namespace CCSB.Controllers
             return View(reserveringen);
         }
 
-        // GET: Reserveringen/Edit/5
+        // GET: Reserveringen/Edit
+        
         public async Task<IActionResult> Edit(int? id)
+            //if id is not found, return
         {
             if (id == null)
             {
                 return NotFound();
             }
-
+            //if id is found search for reservations, if not found, return if found get reserveringen from user id
             var reserveringen = await _context.Reserveringen.FindAsync(id);
             if (reserveringen == null)
             {
@@ -87,12 +90,13 @@ namespace CCSB.Controllers
             return View(reserveringen);
         }
 
-        // POST: Reserveringen/Edit/5
+        // POST: Reserveringen/Edit
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, [Bind("Id,StartDatum,ApplicationUserId,Vehicle")] Reserveringen reserveringen)
+        //updates database 
         {
             if (id != reserveringen.Id)
             {
@@ -123,7 +127,7 @@ namespace CCSB.Controllers
             return View(reserveringen);
         }
 
-        // GET: Reserveringen/Delete/5
+        // GET: Reserveringen/Delete reservation
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -142,7 +146,7 @@ namespace CCSB.Controllers
             return View(reserveringen);
         }
 
-        // POST: Reserveringen/Delete/5
+        // POST: Reserveringen/Deletes out of the database
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int? id)

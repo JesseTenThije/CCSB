@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.StartDatum)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApplicationUser)
+                @Html.DisplayNameFor(model => model.ApplicationUser.Email)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Vehicle)
@@ -31,7 +31,7 @@
                 @Html.DisplayFor(modelItem => item.StartDatum)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ApplicationUser.Id)
+                @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Vehicle)
