@@ -25,4 +25,10 @@
     <Folder Include="Models\ViewModels\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\Caravanbg.jpg" />
+    <None Include="wwwroot\img\CaravanLogo.jpg" />
+    <None Include="wwwroot\img\Ugoz-logo.png" />
+  </ItemGroup>
+
 </Project>
