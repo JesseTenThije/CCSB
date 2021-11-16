@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace CCSB.Models
 {
+    //Make's database migration and save's appointment's to database
     public class Appointment
     {
         public int Id { get; set; }

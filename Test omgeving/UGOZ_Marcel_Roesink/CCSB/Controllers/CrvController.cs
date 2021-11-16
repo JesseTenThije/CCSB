@@ -24,6 +24,7 @@ namespace CCSB.Controllers
         }
 
         [HttpPost]
+        //Register form for a vehicle
         public IActionResult RegisterCrv(RegisterCrvViewModel model)
         {
             if (ModelState.IsValid)
@@ -37,6 +38,7 @@ namespace CCSB.Controllers
                     CrvPlate = model.CrvPlate
 
                 };
+                //adds vehicle to database and save's them in database
                 _db.Crv.Add(crv);
                 _db.SaveChanges();
                 return RedirectToAction("Index", "Home");
