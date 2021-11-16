@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\CCSB\\CCSB.csproj": {}
+    "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\CCSB\\CCSB.csproj": {
+    "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\CCSB\\CCSB.csproj",
+        "projectUniqueName": "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj",
         "projectName": "CCSB",
-        "projectPath": "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\CCSB\\CCSB.csproj",
-        "packagesPath": "C:\\Users\\jaspe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaspe\\Documents\\CCSB\\CCSB\\CCSB\\obj\\",
+        "projectPath": "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj",
+        "packagesPath": "C:\\Users\\jelle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jelle\\CCSB\\CCSB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\jaspe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jelle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -91,11 +93,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
->>>>>>> Stashed changes
         }
       }
     }
