@@ -26,7 +26,7 @@ namespace CCSB.Controllers
 
         }
 
-        // GET: Reserveringen/Details/5
+        // GET: Reserveringen/Details
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -49,7 +49,7 @@ namespace CCSB.Controllers
         public IActionResult Create()
         {
             ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email");
-            ViewData["Crv"] = new SelectList(_context.Crv, "Id", "CrvPlate");
+            ViewData["CrvPlate"] = new SelectList(_context.Crv, "Id", "CrvPlate");
             return View();
         }
 
@@ -120,6 +120,7 @@ namespace CCSB.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email", reserveringen.ApplicationUserId);
+            ViewData["Crv"] = new SelectList(_context.Crv, "Id", "CrvPlate");
             return View(reserveringen);
         }
 
