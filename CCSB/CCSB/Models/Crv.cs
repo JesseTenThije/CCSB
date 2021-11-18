@@ -24,14 +24,14 @@ namespace CCSB.Models
             [Description("No")]
             No = 1
         }
-        [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Special character should not be entered")]
+        [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Merk")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string CrvName { get; set; }
-        [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Special character should not be entered")]
+        [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Type")]
         public string CrvType { get; set; }
-        [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Special character should not be entered")]
+        [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Lengte (in cm)")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public int CrvLength { get; set; }
@@ -42,8 +42,7 @@ namespace CCSB.Models
 
         [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
-       
-
+        [RegularExpression(@"^[b-df-hj-np-tv-z-B-DF-HJ-NP-TV-Z0-9[-]+$", ErrorMessage = "Geen klinkers of speciale karakters toegestaan")]
         public string CrvPlate
         {
             get
