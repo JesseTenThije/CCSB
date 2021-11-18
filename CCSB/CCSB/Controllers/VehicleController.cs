@@ -9,6 +9,7 @@ using CCSB.Models;
 
 namespace CCSB.Controllers
 {
+
     public class VehicleController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -28,6 +29,7 @@ namespace CCSB.Controllers
         // GET: Vehicle/Details
         public async Task<IActionResult> Details(int? id)
         {
+
             if (id == null)
             {
                 return NotFound();
