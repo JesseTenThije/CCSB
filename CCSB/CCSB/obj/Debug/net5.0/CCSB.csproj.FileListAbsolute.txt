@@ -1752,11 +1752,6 @@ C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Account\Login
 C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Create.cshtml.g.cs
-C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Delete.cshtml.g.cs
-C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Details.cshtml.g.cs
-C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Edit.cshtml.g.cs
-C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Index.cshtml.g.cs
 C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -1779,3 +1774,8 @@ C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\CCSB.csproj.CopyComplete
 C:\Users\jelle\Documents\GitHub\CCSB\CCSB\CCSB\obj\Debug\net5.0\CCSB.dll
 C:\Users\jelle\Documents\GitHub\CCSB\CCSB\CCSB\obj\Debug\net5.0\ref\CCSB.dll
 C:\Users\jelle\Documents\GitHub\CCSB\CCSB\CCSB\obj\Debug\net5.0\CCSB.pdb
+C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Create.cshtml.g.cs
+C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Delete.cshtml.g.cs
+C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Details.cshtml.g.cs
+C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Edit.cshtml.g.cs
+C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\obj\Debug\net5.0\Razor\Views\Reserveringen\Index.cshtml.g.cs

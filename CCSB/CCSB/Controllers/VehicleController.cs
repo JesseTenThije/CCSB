@@ -21,7 +21,7 @@ namespace CCSB.Controllers
         // GET: Vehicle
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Crv.Include(c => c.ApplicationUser);
+            var applicationDbContext = _context.Crv.Include(c => c.ApplicationUser).Include(r=>r.Reserveringen);
             return View(await applicationDbContext.ToListAsync());
         }
 

@@ -66,6 +66,22 @@
                         <a asp-action="Delete" asp-route-id="@item.Id">Verwijderen</a>
                     </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <ol>
+                            @foreach (var r in item.Reserveringen)
+                            {
+                                <li>
+                                    @item.CrvPlate
+                                </li>
+                                <li>
+                                    @r.StartDatum
+                                </li>
+                            }
+                        </ol>
+                    </td>
+                </tr>
             }
         </tbody>
     </table>

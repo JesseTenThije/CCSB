@@ -185,20 +185,13 @@ namespace CCSB.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StartDatum = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    StartDatum = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Vehicle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CrvId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reserveringen", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Reserveringen_AspNetUsers_ApplicationUserId",
-                        column: x => x.ApplicationUserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Reserveringen_Crv_CrvId",
                         column: x => x.CrvId,
@@ -249,11 +242,6 @@ namespace CCSB.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Crv_ApplicationUserId",
                 table: "Crv",
-                column: "ApplicationUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Reserveringen_ApplicationUserId",
-                table: "Reserveringen",
                 column: "ApplicationUserId");
 
             migrationBuilder.CreateIndex(

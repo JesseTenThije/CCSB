@@ -15,19 +15,12 @@ namespace CCSB.Models
         public int? Id { get; set; }
 
         [DataType(DataType.Date)]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public DateTime? StartDatum { get; set; }
 
-
-        [DisplayName("Kies de gebruiker")]
-        public string ApplicationUserId { get; set; }
-        [DisplayName("Gebruiker")]
-        public ApplicationUser ApplicationUser { get; set; }
-
-        public string Vehicle { get; set; }
+        public int CrvId { get; set; }
 
         [DisplayName("Voertuig")]
         public Crv Crv { get; set; }
-
-
     }
 }

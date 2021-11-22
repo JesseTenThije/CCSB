@@ -4,14 +4,16 @@ using CCSB.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CCSB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211118103850_Fixed reserveringen")]
+    partial class Fixedreserveringen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -134,7 +136,7 @@ namespace CCSB.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CrvId")
+                    b.Property<int?>("CrvId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("StartDatum")
@@ -291,10 +293,8 @@ namespace CCSB.Migrations
             modelBuilder.Entity("CCSB.Models.Reserveringen", b =>
                 {
                     b.HasOne("CCSB.Models.Crv", "Crv")
-                        .WithMany("Reserveringen")
-                        .HasForeignKey("CrvId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("CrvId");
 
                     b.Navigation("Crv");
                 });
@@ -348,11 +348,6 @@ namespace CCSB.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("CCSB.Models.Crv", b =>
-                {
-                    b.Navigation("Reserveringen");
                 });
 #pragma warning restore 612, 618
         }

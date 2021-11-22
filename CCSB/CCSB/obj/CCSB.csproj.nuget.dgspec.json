@@ -1,41 +1,25 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD:CCSB/obj/CCSB.csproj.nuget.dgspec.json
-    "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj": {}
+    "C:\\Users\\jesse\\Desktop\\CCSB\\CCSB\\CCSB\\CCSB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj": {
+    "C:\\Users\\jesse\\Desktop\\CCSB\\CCSB\\CCSB\\CCSB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj",
+        "projectUniqueName": "C:\\Users\\jesse\\Desktop\\CCSB\\CCSB\\CCSB\\CCSB.csproj",
         "projectName": "CCSB",
-        "projectPath": "C:\\Users\\jelle\\CCSB\\CCSB\\CCSB.csproj",
-        "packagesPath": "C:\\Users\\jelle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jelle\\CCSB\\CCSB\\obj\\",
-=======
-    "C:\\Users\\jelle\\Documents\\GitHub\\CCSB\\CCSB\\CCSB\\CCSB.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\jelle\\Documents\\GitHub\\CCSB\\CCSB\\CCSB\\CCSB.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\jelle\\Documents\\GitHub\\CCSB\\CCSB\\CCSB\\CCSB.csproj",
-        "projectName": "CCSB",
-        "projectPath": "C:\\Users\\jelle\\Documents\\GitHub\\CCSB\\CCSB\\CCSB\\CCSB.csproj",
-        "packagesPath": "C:\\Users\\jelle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jelle\\Documents\\GitHub\\CCSB\\CCSB\\CCSB\\obj\\",
->>>>>>> 73564a6b3e52d83786a1ed95690f95e30fe3c376:CCSB/CCSB/obj/CCSB.csproj.nuget.dgspec.json
+        "projectPath": "C:\\Users\\jesse\\Desktop\\CCSB\\CCSB\\CCSB\\CCSB.csproj",
+        "packagesPath": "C:\\Users\\jesse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesse\\Desktop\\CCSB\\CCSB\\CCSB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jelle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,31 +46,31 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -111,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

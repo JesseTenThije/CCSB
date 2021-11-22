@@ -7,8 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = CCSB
-<<<<<<< HEAD:CCSB/obj/Debug/net5.0/CCSB.GeneratedMSBuildEditorConfig.editorconfig
-build_property.ProjectDir = C:\Users\jelle\CCSB\CCSB\
-=======
-build_property.ProjectDir = C:\Users\jelle\Documents\GitHub\CCSB\CCSB\CCSB\
->>>>>>> 73564a6b3e52d83786a1ed95690f95e30fe3c376:CCSB/CCSB/obj/Debug/net5.0/CCSB.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = C:\Users\jesse\Desktop\CCSB\CCSB\CCSB\

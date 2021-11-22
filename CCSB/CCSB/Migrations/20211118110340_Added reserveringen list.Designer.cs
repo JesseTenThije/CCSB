@@ -10,15 +10,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CCSB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211109192003_full db")]
-    partial class fulldb
+    [Migration("20211118110340_Added reserveringen list")]
+    partial class Addedreserveringenlist
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CCSB.Models.ApplicationUser", b =>
@@ -136,21 +136,14 @@ namespace CCSB.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("CrvId")
+                    b.Property<int>("CrvId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("StartDatum")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Vehicle")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ApplicationUserId");
 
                     b.HasIndex("CrvId");
 
@@ -299,15 +292,11 @@ namespace CCSB.Migrations
 
             modelBuilder.Entity("CCSB.Models.Reserveringen", b =>
                 {
-                    b.HasOne("CCSB.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("ApplicationUserId");
-
                     b.HasOne("CCSB.Models.Crv", "Crv")
-                        .WithMany()
-                        .HasForeignKey("CrvId");
-
-                    b.Navigation("ApplicationUser");
+                        .WithMany("Reserveringen")
+                        .HasForeignKey("CrvId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Crv");
                 });
@@ -361,6 +350,11 @@ namespace CCSB.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CCSB.Models.Crv", b =>
+                {
+                    b.Navigation("Reserveringen");
                 });
 #pragma warning restore 612, 618
         }

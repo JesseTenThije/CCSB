@@ -44,5 +44,7 @@ namespace CCSB.Models
         public string ApplicationUserId { get; set; }
         [DisplayName("Gebruiker")]
         public ApplicationUser ApplicationUser { get; set; }
+
+        public List<Reserveringen> Reserveringen { get; set; }
     }
 }
