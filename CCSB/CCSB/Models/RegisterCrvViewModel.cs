@@ -36,5 +36,7 @@ namespace CCSB.Models
         [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string CrvPlate { get; set; }
+
+        
     }
 }

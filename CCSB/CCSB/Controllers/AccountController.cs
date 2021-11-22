@@ -11,11 +11,12 @@ namespace CCSB.Controllers
 {
     public class AccountController : Controller
     {
+        //Connect to database
         private readonly ApplicationDbContext _db;
         UserManager<ApplicationUser> _userManager;
         SignInManager<ApplicationUser> _signInManager;
         RoleManager<IdentityRole> _roleManager;
-
+        //Register user to database
         public AccountController(ApplicationDbContext db, UserManager<ApplicationUser> userManager,
         SignInManager<ApplicationUser> signInManager,
         RoleManager<IdentityRole> roleManager )
@@ -28,6 +29,7 @@ namespace CCSB.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //Login succeed or failed code
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
@@ -41,7 +43,7 @@ namespace CCSB.Controllers
             }
             return View();
         }
-
+        //Role choose for register user
         public IActionResult Login()
         {
             return View();
@@ -58,6 +60,7 @@ namespace CCSB.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //New user register form
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
@@ -70,11 +73,11 @@ namespace CCSB.Controllers
                     MiddleName = model.MiddleName,
                     LastName = model.LastName
                 };
+                //Login failed or succeed
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, model.RoleName);
-                    await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
                 foreach(var error in result.Errors)
@@ -86,6 +89,7 @@ namespace CCSB.Controllers
         }
 
         [HttpPost]
+        //Sign out button
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();

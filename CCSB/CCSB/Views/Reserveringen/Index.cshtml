@@ -16,10 +16,10 @@
                 @Html.DisplayNameFor(model => model.StartDatum)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Crv)
+                @Html.DisplayNameFor(model => model.ApplicationUser.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Crv.CrvPlate)
+                @Html.DisplayNameFor(model => model.Vehicle)
             </th>
             <th></th>
         </tr>
@@ -31,10 +31,10 @@
                 @Html.DisplayFor(modelItem => item.StartDatum)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Crv.Id)
+                @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Crv.CrvPlate)
+                @Html.DisplayFor(modelItem => item.Vehicle)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Pas aan</a> |

@@ -12,6 +12,7 @@ namespace CCSB.Controllers
     
     public class AccountController : Controller
     {
+        //Connect to database
         private readonly ApplicationDbContext _db;
         UserManager<ApplicationUser> _userManager;
         SignInManager<ApplicationUser> _signInManager;
@@ -74,6 +75,7 @@ namespace CCSB.Controllers
                     MiddleName = model.MiddleName,
                     LastName = model.LastName
                 };
+                //Login failed or succeed
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
