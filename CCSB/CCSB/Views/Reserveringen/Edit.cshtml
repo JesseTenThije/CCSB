@@ -19,14 +19,9 @@
                 <span asp-validation-for="StartDatum" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ApplicationUserId" class="control-label"></label>
-                <select asp-for="ApplicationUserId" class="form-control" asp-items="ViewBag.ApplicationUserId"></select>
-                <span asp-validation-for="ApplicationUserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Vehicle" class="control-label"></label>
-                <select asp-for="Vehicle" class="form-control" asp-items="ViewBag.CrvPlate"></select>
-                <span asp-validation-for="Vehicle" class="text-danger"></span>
+                <label asp-for="Crv" class="control-label"></label>
+                <select asp-for="Crv" class="form-control" asp-items="ViewBag.CrvPlate"></select>
+                <span asp-validation-for="Crv" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

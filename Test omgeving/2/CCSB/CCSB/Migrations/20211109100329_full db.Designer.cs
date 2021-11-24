@@ -10,7 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CCSB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
+<<<<<<< Updated upstream:CCSB/CCSB/Migrations/20211109192003_full db.Designer.cs
     [Migration("20211109192003_full db")]
+=======
+    [Migration("20211109100329_full db")]
+>>>>>>> Stashed changes:Test omgeving/2/CCSB/CCSB/Migrations/20211109100329_full db.Designer.cs
     partial class fulldb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

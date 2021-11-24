@@ -9,6 +9,7 @@ using CCSB.Models;
 
 namespace CCSB.Controllers
 {
+
     public class VehicleController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -21,13 +22,14 @@ namespace CCSB.Controllers
         // GET: Vehicle
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Crv.Include(c => c.ApplicationUser);
+            var applicationDbContext = _context.Crv.Include(c => c.ApplicationUser).Include(r=>r.Reserveringen);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Vehicle/Details/5
+        // GET: Vehicle/Details
         public async Task<IActionResult> Details(int? id)
         {
+
             if (id == null)
             {
                 return NotFound();
@@ -85,9 +87,9 @@ namespace CCSB.Controllers
             return View(crv);
         }
 
-        // POST: Vehicle/Edit/5
+        // POST: Vehicle/Edit
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, [Bind("Id,CrvName,CrvType,CrvLength,CrvElectricity,CrvPlate,ApplicationUserId")] Crv crv)
@@ -121,7 +123,7 @@ namespace CCSB.Controllers
             return View(crv);
         }
 
-        // GET: Vehicle/Delete/5
+        // GET: Vehicle/Delete
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,7 +142,7 @@ namespace CCSB.Controllers
             return View(crv);
         }
 
-        // POST: Vehicle/Delete/5
+        // POST: Vehicle/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int? id)
