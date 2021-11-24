@@ -12,7 +12,7 @@ namespace CCSB.Controllers
     public class ReserveringenController : Controller
     {
         private readonly ApplicationDbContext _context;
-        //Connect to datatbase
+
         public ReserveringenController(ApplicationDbContext context)
         {
             _context = context;
@@ -21,12 +21,12 @@ namespace CCSB.Controllers
         // GET: Reserveringen
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Reserveringen.Include(r => r.ApplicationUser);
+            var applicationDbContext = _context.Reserveringen.Include(r => r.Crv);
             return View(await applicationDbContext.ToListAsync());
 
         }
 
-        // GET: Reserveringen/Details of a specific id
+        // GET: Reserveringen/Details
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -35,7 +35,7 @@ namespace CCSB.Controllers
             }
 
             var reserveringen = await _context.Reserveringen
-                .Include(r => r.ApplicationUser)
+                .Include(r => r.Crv)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (reserveringen == null)
             {
@@ -48,18 +48,16 @@ namespace CCSB.Controllers
         // GET: Reserveringen/Create
         public IActionResult Create()
         {
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email");
             ViewData["CrvPlate"] = new SelectList(_context.Crv, "Id", "CrvPlate");
             return View();
         }
 
         // POST: Reserveringen/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-     
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //Combines user reservation data
-        public async Task<IActionResult> Create([Bind("Id,StartDatum,ApplicationUserId,Vehicle")] Reserveringen reserveringen)
+        public async Task<IActionResult> Create([Bind("Id,StartDatum,CrvId")] Reserveringen reserveringen)
         {
             if (ModelState.IsValid)
             {
@@ -67,36 +65,31 @@ namespace CCSB.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email", reserveringen.ApplicationUserId);
             return View(reserveringen);
         }
 
-        // GET: Reserveringen/Edit
-        
+        // GET: Reserveringen/Edit/5
         public async Task<IActionResult> Edit(int? id)
-            //if id is not found, return
         {
             if (id == null)
             {
                 return NotFound();
             }
-            //if id is found search for reservations, if not found, return if found get reserveringen from user id
+
             var reserveringen = await _context.Reserveringen.FindAsync(id);
             if (reserveringen == null)
             {
                 return NotFound();
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email", reserveringen.ApplicationUserId);
             return View(reserveringen);
         }
 
-        // POST: Reserveringen/Edit
+        // POST: Reserveringen/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-      
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, [Bind("Id,StartDatum,ApplicationUserId,Vehicle")] Reserveringen reserveringen)
-        //updates database 
+        public async Task<IActionResult> Edit(int? id, [Bind("Id,StartDatum,Crv")] Reserveringen reserveringen)
         {
             if (id != reserveringen.Id)
             {
@@ -123,11 +116,11 @@ namespace CCSB.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Email", reserveringen.ApplicationUserId);
+            ViewData["Crv"] = new SelectList(_context.Crv, "Id", "CrvPlate");
             return View(reserveringen);
         }
 
-        // GET: Reserveringen/Delete reservation
+        // GET: Reserveringen/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -136,7 +129,7 @@ namespace CCSB.Controllers
             }
 
             var reserveringen = await _context.Reserveringen
-                .Include(r => r.ApplicationUser)
+                .Include(r => r.Crv)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (reserveringen == null)
             {
@@ -146,7 +139,7 @@ namespace CCSB.Controllers
             return View(reserveringen);
         }
 
-        // POST: Reserveringen/Deletes out of the database
+        // POST: Reserveringen/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int? id)
