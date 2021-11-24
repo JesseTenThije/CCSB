@@ -17,6 +17,10 @@ namespace CCSB.Models
         [DataType(DataType.Date)]
         public DateTime? StartDatum { get; set; }
 
+        //[startDate]
+        //[Required(ErrorMessage = "{0} Wij zijn niet geopend op feestdagen.")]
+       // public string startDatum { get; set; }
+
 
         [DisplayName("Kies de gebruiker")]
         public string ApplicationUserId { get; set; }

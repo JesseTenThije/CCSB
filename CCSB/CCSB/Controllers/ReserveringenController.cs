@@ -70,6 +70,11 @@ namespace CCSB.Controllers
             return View(reserveringen);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+
+
         // GET: Reserveringen/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -92,8 +97,31 @@ namespace CCSB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+
         public async Task<IActionResult> Edit(int? id, [Bind("Id,StartDatum,ApplicationUserId,Vehicle")] Reserveringen reserveringen)
         {
+            var startDate = reserveringen.StartDatum;
+            DateTime dt1 = new DateTime(2021, 01, 01);
+            DateTime dt2 = new DateTime(2021, 04, 02);
+            DateTime dt3 = new DateTime(2021, 04, 04);
+            DateTime dt4 = new DateTime(2021, 04, 05);
+            DateTime dt5 = new DateTime(2021, 04, 27);
+            DateTime dt6 = new DateTime(2021, 05, 05);
+            DateTime dt7 = new DateTime(2021, 05, 13);
+            DateTime dt8 = new DateTime(2021, 05, 23);
+            DateTime dt9 = new DateTime(2021, 05, 24);
+            DateTime dt10 = new DateTime(2021, 12, 25);
+            DateTime dt11 = new DateTime(2021, 12, 26);
+
+
+            if (startDate == dt1 || startDate == dt2 || startDate == dt3 || startDate == dt4 || startDate == dt5 || startDate == dt6 || startDate == dt7 || startDate == dt8 || startDate == dt9 || startDate == dt10 || startDate == dt11)
+            {
+
+                return NotFound();
+            }
+
+
             if (id != reserveringen.Id)
             {
                 return NotFound();
