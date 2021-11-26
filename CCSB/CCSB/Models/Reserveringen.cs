@@ -18,7 +18,9 @@ namespace CCSB.Models
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public DateTime? StartDatum { get; set; }
 
+
         public int CrvId { get; set; }
+
 
         [DisplayName("Voertuig")]
         public Crv Crv { get; set; }

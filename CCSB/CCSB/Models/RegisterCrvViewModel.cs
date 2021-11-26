@@ -35,6 +35,7 @@ namespace CCSB.Models
 
         [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        [RegularExpression(@"^[b-df-hj-np-tv-z-B-DF-HJ-NP-TV-Z0-9[-]+$", ErrorMessage = "Geen klinkers of speciale karakters toegestaan")]
         public string CrvPlate { get; set; }
 
         

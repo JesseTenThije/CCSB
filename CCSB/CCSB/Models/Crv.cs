@@ -24,16 +24,20 @@ namespace CCSB.Models
             [Description("No")]
             No = 1
         }
+        //No special characters can be added
         [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Merk")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string CrvName { get; set; }
+        //No special characters can be added
         [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Type")]
         public string CrvType { get; set; }
+        //No special characters can be added
         [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Lengte (in cm)")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        //No special characters can be added
         public int CrvLength { get; set; }
         [DisplayName("Electriciteit")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
@@ -42,7 +46,9 @@ namespace CCSB.Models
 
         [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        //No vowels or special characters in te license plate (except for -)
         [RegularExpression(@"^[b-df-hj-np-tv-z-B-DF-HJ-NP-TV-Z0-9[-]+$", ErrorMessage = "Geen klinkers of speciale karakters toegestaan")]
+        //Sets string to uppercase
         public string CrvPlate
         {
             get

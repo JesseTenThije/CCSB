@@ -10,7 +10,7 @@ namespace CCSB.Models
     public class RegisterViewModel
     {
         [DisplayName("Voornaam")]
-        [Required(ErrorMessage ="{0} is een verplicht veld.")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string FirstName { get; set; }
 
         [DisplayName("Tussenvoegsels")]
@@ -19,6 +19,15 @@ namespace CCSB.Models
         [DisplayName("Achternaam")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         public string LastName { get; set; }
+
+        [DisplayName("Adres")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        public string Adres { get; set; }
+
+        [RegularExpression("[1-9][0-9]{3}[A-Z]{2}", ErrorMessage = "dit is geen geldig nederlandse postcode, Voorbeeld 1000XX")]
+        [DisplayName("Postcode")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        public string Postcode { get; set; }
 
         [EmailAddress]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
