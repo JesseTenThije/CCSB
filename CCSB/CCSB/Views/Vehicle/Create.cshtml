@@ -25,11 +25,37 @@
                     <input asp-for="CrvType" class="form-control" />
                     <span asp-validation-for="CrvType" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="CrvLength" class="control-label"></label>
                     <input asp-for="CrvLength" class="form-control" />
                     <span asp-validation-for="CrvLength" class="text-danger"></span>
                 </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvBuildYear" class="control-label"></label>
+                    <input asp-for="CrvBuildYear" class="form-control" />
+                    <span asp-validation-for="CrvBuildYear" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvSleepingPlace" class="control-label"></label>
+                    <input asp-for="CrvSleepingPlace" class="form-control" />
+                    <span asp-validation-for="CrvSleepingPlace" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvPks" class="control-label"></label>
+                    <input asp-for="CrvPks" class="form-control" />
+                    <span asp-validation-for="CrvPks" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvKms" class="control-label"></label>
+                    <input asp-for="CrvKms" class="form-control" />
+                    <span asp-validation-for="CrvKms" class="text-danger"></span>
+                </div>
+
                 <div class="form-group">
                     <label asp-for="CrvElectricity" class="control-label"></label>
                     <select asp-for="CrvElectricity"
@@ -39,6 +65,47 @@
                     </select>
                     <span asp-validation-for="CrvElectricity" class="text-danger"></span>
                 </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvDirtWater" class="control-label"></label>
+                    <select asp-for="CrvDirtWater"
+                            asp-items="@CCSB.Utility.Helper.GetYesNoForDropDown()"
+                            class="form-control">
+                        <option selected>-- Selecteer een keuze</option>
+                    </select>
+                    <span asp-validation-for="CrvDirtWater" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvPullingHook" class="control-label"></label>
+                    <select asp-for="CrvPullingHook"
+                            asp-items="@CCSB.Utility.Helper.GetYesNoForDropDown()"
+                            class="form-control">
+                        <option selected>-- Selecteer een keuze</option>
+                    </select>
+                    <span asp-validation-for="CrvPullingHook" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvArico" class="control-label"></label>
+                    <select asp-for="CrvArico"
+                            asp-items="@CCSB.Utility.Helper.GetYesNoForDropDown()"
+                            class="form-control">
+                        <option selected>-- Selecteer een keuze</option>
+                    </select>
+                    <span asp-validation-for="CrvArico" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CrvBikes" class="control-label"></label>
+                    <select asp-for="CrvBikes"
+                            asp-items="@CCSB.Utility.Helper.GetYesNoForDropDown()"
+                            class="form-control">
+                        <option selected>-- Selecteer een keuze</option>
+                    </select>
+                    <span asp-validation-for="CrvBikes" class="text-danger"></span>
+                </div>
+
                 <div class="form-group">
                     <label asp-for="CrvPlate" class="control-label"></label>
                     <input asp-for="CrvPlate" class="form-control" />
@@ -62,7 +129,6 @@
 
 else
 {
-<ul class="nav navbar-nav">
-
-</ul>
+    <ul class="nav navbar-nav">
+    </ul>
 }

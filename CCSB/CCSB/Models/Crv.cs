@@ -24,6 +24,18 @@ namespace CCSB.Models
             [Description("No")]
             No = 1
         }
+
+        public enum CrvKind
+        {
+            [Description("Integraal")]
+            Integraal = 0,
+
+            [Description("Alkoof")]
+            Alkoof = 1,
+
+            [Description("Halfintegraal")]
+            Halfintegraal = 2
+        }
         //No special characters can be added
         [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Merk")]
@@ -33,6 +45,23 @@ namespace CCSB.Models
         [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Type")]
         public string CrvType { get; set; }
+
+        [DisplayName("Bouw jaar")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        public int CrvBuildYear { get; set; }
+
+        [DisplayName("Aantal slaapplaatsen")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        public int CrvSleepingPlace { get; set; }
+
+        [DisplayName("Aantal PK's")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        public int CrvPks { get; set; }
+
+        [DisplayName("Kilometerstand")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        public int CrvKms { get; set; }
+
         //No special characters can be added
         [RegularExpression(@"^[a-zA-Z0-9]+$", ErrorMessage = "Geen speciale karakters toegestaan")]
         [DisplayName("Lengte (in cm)")]
@@ -43,6 +72,26 @@ namespace CCSB.Models
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
         [EnumDataType(typeof(Electricity))]
         public Electricity CrvElectricity { get; set; }
+
+        [DisplayName("Fietsendrager")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        [EnumDataType(typeof(Electricity))]
+        public Electricity CrvBikes { get; set; }
+
+        [DisplayName("Airco")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        [EnumDataType(typeof(Electricity))]
+        public Electricity CrvArico { get; set; }
+
+        [DisplayName("Trekhaak")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        [EnumDataType(typeof(Electricity))]
+        public Electricity CrvPullingHook { get; set; }
+
+        [DisplayName("Vuilwatertank")]
+        [Required(ErrorMessage = "{0} is een verplicht veld.")]
+        [EnumDataType(typeof(Electricity))]
+        public Electricity CrvDirtWater { get; set; }
 
         [DisplayName("Kenteken")]
         [Required(ErrorMessage = "{0} is een verplicht veld.")]
